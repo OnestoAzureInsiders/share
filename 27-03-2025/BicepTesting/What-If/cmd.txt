@@ -1,0 +1,33 @@
+cd 'C:\Git\Onesto\Toolcase\Insiders\270325\BicepTesting\What-If\'
+
+
+#################### Del 1
+
+$whatif = az deployment sub what-if --template-file 'what-if1.bicep' --location 'swedencentral' --no-pretty-print | Out-File 'what-if1-az.json'
+
+alternativt: 
+
+$whatif = Get-AzDeploymentWhatIfResult -TemplateFile 'what-if1.bicep' -Location 'swedencentral' | ConvertTo-Json -Depth 24 | Out-File 'what-if1-ps.json'
+
+## Deploy
+
+az deployment sub create --confirm-with-what-if --location 'swedencentral' --template-file 'what-if1.bicep'
+
+
+################### Del 2
+
+$whatif = az deployment sub what-if --template-file 'what-if2.bicep' --location 'swedencentral' --no-pretty-print | Out-File 'what-if2-az.json'
+
+alternativt: 
+
+$whatif = Get-AzDeploymentWhatIfResult -TemplateFile 'what-if2.bicep' -Location 'swedencentral' | ConvertTo-Json -Depth 24 | Out-File 'what-if2-ps.json'
+
+
+## Deploy
+
+az deployment sub create --confirm-with-what-if --location 'swedencentral' --template-file 'what-if2.bicep'
+
+
+#################################################################################
+#### Hvad sker der når jeg kører what-if på første del igen??                ####
+#################################################################################

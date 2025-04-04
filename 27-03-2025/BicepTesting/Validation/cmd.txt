@@ -1,0 +1,5 @@
+cd 'C:\Git\Onesto\Toolcase\Insiders\270325\BicepTesting\Validation'
+
+az bicep build --file 'validation.bicep'
+
+az deployment sub validate --template-file 'validation.bicep' --location 'swedencentral'
