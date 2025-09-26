@@ -1,0 +1,33 @@
+{
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "deny_vm_standard_hdd",
+  "properties": {
+    "displayName": "Deny virtual machines with Standard HDD OS Disks",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "Deny virtual machines with Standard HDD OS Disks",
+    "metadata": {
+      "category": "Compute"
+    },
+    "version": "1.0.0",
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/virtualMachines"
+          },
+          {
+            "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.managedDisk.storageAccountType",
+            "equals": "Standard_LRS"
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": ["1.0.0"]
+  }
+}
