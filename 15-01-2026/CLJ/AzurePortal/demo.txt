@@ -1,0 +1,37 @@
+- Service groups
+    ○ Oprette Service group
+    ○ Oprette Health Model
+    ○ Tildele monitoring reader på Service Group resources til managed identity
+    ○ Vise Health Model - SQL DB er eneste resource med health status
+
+- Vise resource explorer 
+    ○ Get Health Model Resource Group
+    ○ Opdatere Tags
+
+- Bruge ARM API Playground
+    ○ Get VM Resource Group
+    ○ Slette Resource Group
+    ○ Tale om Azure Rest API dokumentation - https://learn.microsoft.com/en-us/rest/api/azure/
+
+
+
+
+
+
+
+
+
+
+Resource Explorer
+
+Body:
+{
+    "location": "uksouth",
+    "tags": {
+        "Cost Center": "Azure Insiders"
+    }
+}
+
+ARM API
+Uri part: subscriptions/46dd8b9c-cc14-4f73-ba3c-f53a335f0fdd/resourceGroups/rg-insidersdummyrg-weu-001?api-version=2021-04-01
+ 

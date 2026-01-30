@@ -1,0 +1,27 @@
+	General: 
+	- Vise deployment i Azure
+        ○ Portal (subnets med delegations, SQL med Private Endpoint)		
+        ○ Bicep
+	- Vise Power Platform
+		○ Environment (managed)
+        ○ Billing Plan (ikke nødvendig for min demo)
+
+	- Vise Fabric
+		○ Workspace - Fabric
+		○ Connections & Gateways (har snydt)
+		○ Semantisk model
+	
+	- Power Platform
+		○ Lave link til Enterprise Policy fra Managed Environment.
+		○ Teste med en ny Power App
+		○ Tal om roll back - GitHub link (https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/README.md#9-remove-subnet-injection-from-an-environment)
+	- Fabric
+		○ Oprette Gateway til delegated subnet (allerede gjort)
+		○ Teste forbindelse til SQL
+        ○ Oprette Connection (i Fabric workspace)
+        ○ Forbinde semantisk model
+
+
+
+SQL Server: sqlsvrinsiders6cvbp.database.windows.net
+SQL DB: sqldb-insiders-neu-001
